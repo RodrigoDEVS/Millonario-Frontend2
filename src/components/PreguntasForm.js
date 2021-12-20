@@ -1,28 +1,27 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
-const PreguntasForm = () => {
+const PreguntasForm = ({preg}) => {
     return (
         <div>
             <Card className="text-center">
                 <Card.Body>
                     <Card.Text>
-                        Contexto de las preguntas
+                        {preg.pregunta}
                     </Card.Text>
                 </Card.Body>
             </Card>
             <>
-                <Button variant="primary">Opcion 1</Button>{' '}
-                <Button variant="primary">Opcion 2</Button>{' '}
-                <Button variant="primary">Opcion 3</Button>{' '}
-                <Button onClick={alertClicked} variant="primary">Opcion 4</Button>{' '}
+                <Button onClick={alertClicked} variant="primary">{preg.resp1}</Button>{' '}
+                <Button onClick={alertClicked} variant="primary">{preg.resp2}</Button>{' '}
+                <Button onClick={alertClicked} variant="primary">{preg.resp3}</Button>{' '}
+                <Button onClick={alertClicked} variant="success">{preg.resp4}</Button>{''}
+                
             </>
         </div>
     )
 }
 function alertClicked() {
-    alert('La Respuesta es Correcta');
+    alert('La Respuesta es Correcta');    
 }
-
-
 export default PreguntasForm

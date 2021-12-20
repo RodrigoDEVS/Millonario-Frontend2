@@ -3,32 +3,37 @@ import {useEffect, useState} from 'react'
 import PreguntasForm from '../components/PreguntasForm'
 
 const Preguntas = () => {
-    const[resp, setJugadores] = useState([])
 
-const getJugadores = async()=>{
+    const[preg, setPreguntas] = useState([])
+
+const getPregunta = async()=>{
     //enviar peticion a la API
-    const resp = await fetch('https://millonario-backend.herokuapp.com/preguntas',{
+    let index = 2;
+    const preg = await fetch(`https://millonario-backend.herokuapp.com/preguntas/indice/${index}`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             }
         })
-        return resp;
+        return preg;
+        
     }
     //Función para que al recargar la página ejecute el método get
     useEffect(()=>{
-        getJugadores().then(async resp=>{
-            let json = await resp.json();
-            setJugadores(json)
+        getPregunta().then(async preg=>{
+            let json = await preg.json();
+            setPreguntas(json)
         })
     })
+    
     return (
         <div>
             <h2>Preguntas</h2>
-            <PreguntasForm/>
+            <PreguntasForm preg={preg}/>
         </div>
     )
     
 }
 
 export default Preguntas
+

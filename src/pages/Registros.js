@@ -16,7 +16,7 @@ const getJugadores = async()=>{
         })
         return resp;
     }
-    //Función para que al recargar la página ejecute el método get
+    //Función para que al cargar la página ejecute el método get
     useEffect(()=>{
         getJugadores().then(async resp=>{
             let json = await resp.json();
