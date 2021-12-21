@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import PreguntasForm from '../components/PreguntasForm'
+import {Card, Button} from 'react-bootstrap'
 
 const Preguntas = () => {
     let exitoso = [];
