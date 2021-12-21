@@ -17,6 +17,7 @@ const PreguntasForm = ({preg}) => {
         <div>
             <div>
             <Card className="text-center">
+            <Card.Header>Por un valor de: <b>{preg.premio}</b> Puntos <br/> Diga:</Card.Header>
                 <Card.Body>
                     <Card.Text>
                         {preg.pregunta}
