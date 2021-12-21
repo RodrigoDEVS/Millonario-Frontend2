@@ -6,9 +6,9 @@ const Landing = () => {
         <div>
             <h1>Bienvenido a Millonarios Por el Mundo</h1>
             <>
-                <Button variant="primary">Empezar</Button>{' '}          
+                <Button href="/jugadores" variant="primary">Empezar</Button>{' '}          
             </>
-
+            <h2>Creditos: </h2>
         </div>
     )
 }

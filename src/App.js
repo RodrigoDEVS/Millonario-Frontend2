@@ -1,13 +1,12 @@
 import './App.css';
-import Jugadores from './pages/Jugadores';
-import Landing from './pages/Landing';
-import Preguntas from './pages/Preguntas';
-import Registros from './pages/Registros';
+import React from 'react';
+import AppRouter from './pages/AppRouter';
 
 function App() {
   return (
     <div className="App">
-      <Landing/>
+      <br/>
+      <AppRouter/>
     </div>
   );
 }
