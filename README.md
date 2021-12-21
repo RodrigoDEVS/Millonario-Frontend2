@@ -11,7 +11,7 @@
        https://millonario-backend.herokuapp.com/jugador, método GET para obtener un arreglo con todos los jugadores registrados en la base de datos
 6. Funcionalidad:
     a) Registro en la base de datos de los usuarios 
-    b) Visualización de los usuarios almacenados en la base de datos
+    b) Visualización de los usuarios almacenados en la base de datos con sus puntuaciones
     c) Visualización de preguntas aleatorias en la interfáz(al recargar página muestra una pregunta al azar)
     d) Seleción de respuesta múltiple (4 opciones, 3 falsas y 1 verdadera).
     e) Visualización en pantalla de la respuesta seleccionada.

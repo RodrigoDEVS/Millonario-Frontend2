@@ -8,7 +8,6 @@ const Landing = () => {
             <>
                 <Button href="/jugadores" variant="primary">Empezar</Button>{' '}          
             </>
-            <h2>Creditos: </h2>
         </div>
     )
 }

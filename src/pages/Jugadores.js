@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import JugadoresForm from '../components/JugadoresForm'
-import JugadoresTabla from '../components/JugadoresTabla';
+import { Button } from 'react-bootstrap';
 
 const Jugadores = () => {
 
@@ -22,7 +22,8 @@ const Jugadores = () => {
         <div>
             <h2>Ingreso de Jugador</h2>
             <JugadoresForm handleJugadores={handleJugadores}/>
-            
+            <br/>
+            <Button href='/registros' variant="primary">Ver Puntuaciones</Button>
         </div>
     )
 }
