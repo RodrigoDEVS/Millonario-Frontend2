@@ -19,21 +19,24 @@ const Preguntas = () => {
                 exitoso.push(indicePregunta);               // lo incluye cuando no lo encuentre
                 listaPreguntas.push(indicePregunta)
                 //console.log('vector', exitoso);
-                console.log("listaPreguntas", listaPreguntas)
             }
         }
-        exitoso = [];                                       // para ir al siguiente grupo debe borrar el vector
+        exitoso = [];    
+                                           // para ir al siguiente grupo debe borrar el vector
         //console.log('Index1 = ', index1);
     }
+    console.log("listaPreguntas", listaPreguntas)
     const [preg, setPreg] = useState({})
 
     const [seq] = useState(listaPreguntas)
+
+    const [preguntaActual, setPreguntaActual] = useState(0)
 
     const getPregunta = async () => {
         //enviar peticion a la API
         //Creo un vector de verificacion
         
-        let index = seq[1];
+        let index = seq[preguntaActual];
         const preg = await fetch(`https://millonario-backend.herokuapp.com/preguntas/indice/${index}`, {
             method: 'GET',
             headers: {
@@ -48,8 +51,12 @@ const Preguntas = () => {
         getPregunta().then(async preg => {
             let json = await preg.json();
             setPreg(json)
-        },[])
-    })
+        })
+        return()=>{
+            let json = preg.json();
+            setPreg(json)
+        }
+    },[preguntaActual])
 
     return (
         <div>
